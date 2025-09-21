@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sreyeesh Garimella — Resume</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --fg:#0f172a; --muted:#475569; --rule:#cbd5e1; --accent:#d3543f; }
+  * { box-sizing: border-box; }
+  body { margin:0; color:var(--fg); font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  .page { max-width: 920px; margin: 18px auto; padding: 0 20px 24px; border: 8px solid #000; }
+  header { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; padding: 16px 6px 8px; }
+  .name { font-size: 34px; letter-spacing:.5px; font-weight: 800; margin:0; }
+  .role { font-size: 18px; font-weight: 800; color: var(--accent); margin-top: 6px; }
+  .contact { display:grid; gap:6px; justify-items:end; font-size: 13px; color:#0f172a; line-height:1.4; }
+  .contact a { color: inherit; text-decoration:none; border-bottom:1px solid transparent; }
+  .contact a:hover { border-bottom-color: currentColor; }
+  .cols { display:grid; grid-template-columns: 1.1fr .9fr; gap: 28px; padding: 10px 6px 18px; }
+  .sec-head { font-size: 14px; font-weight: 800; letter-spacing:.06em; text-transform: uppercase; border-bottom: 3px solid #000; padding-bottom: 4px; margin: 14px 0 8px; }
+  .job h3 { margin: 0; font-size: 16px; }
+  .job .company { color: var(--accent); font-weight: 700; }
+  .job .meta { color: var(--muted); font-size: 12.5px; margin-bottom: 4px; }
+  .job ul { margin: 6px 0 10px 18px; padding:0; }
+  .job li { line-height: 1.45; font-size: 13px; }
+  .sidebar .school { font-weight: 700; color: var(--accent); }
+  .sidebar .edu-item { margin-bottom: 8px; }
+  .sidebar .edu-meta { color: var(--muted); font-size: 12.5px; }
+  .skill-cat { font-weight: 800; color: var(--accent); margin-top: 8px; }
+  .skill-list { margin: 4px 0 6px 18px; padding:0; }
+  .skill-list li { font-size: 13px; line-height: 1.45; }
+  /* Print A4 one page */
+  @media print {
+    @page { size: A4; margin: 0.8cm; }
+    .page { border-width: 6px; }
+    .name { font-size: 28pt; }
+    .role { font-size: 12pt; }
+    .job li, .contact, .skill-list li { font-size: 9.5pt; }
+    .sec-head { font-size: 10.5pt; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <h1 class="name">Sreyeesh Garimella</h1>
+        <div class="role">Junior Full‑Stack JavaScript Engineer</div>
+      </div>
+      <div class="contact">
+        <div>✉ <a href="mailto:sgarime1@gmail.com">sgarime1@gmail.com</a></div>
+        <div>☎ +372 5827 7155</div>
+        <div>🔗 <a href="https://linkedin.com/in/sreyeeshgarimella" target="_blank">linkedin.com/in/sreyeeshgarimella</a></div>
+        <div>💻 <a href="https://github.com/Sreyeesh" target="_blank">github.com/Sreyeesh</a></div>
+        <div>📍 Valgjärve, Põlvamaa, Estonia</div>
+      </div>
+    </header>
+
+    <div class="cols">
+      <!-- LEFT: Objective + Experience -->
+      <main>
+        <div class="sec-head">Career Objective</div>
+        <p style="font-size:13px; line-height:1.5; margin: 4px 0 10px 0;">Junior full‑stack engineer with strong JavaScript/TypeScript, React, and Node.js fundamentals. Comfortable shipping with GitHub Actions and Docker on Linux/WSL2. I bring a reliability mindset from production pipeline roles and am eager to contribute on a team where I can build accessible UI, maintain clean APIs, and learn quickly.</p>
+
+        <div class="sec-head">Work Experience</div>
+        <div class='job'><h3>Founder / Developer</h3><div class='company'>SG Production OÜ</div><div class='meta'>07/2022 – Present · Remote</div><ul><li>Delivered full‑stack web builds and workflow automations with clean APIs and dependable releases.</li><li>Introduced repeatable CI/CD (GitHub Actions) and concise runbooks to cut manual steps and stabilize deployments.</li><li>Built internal dashboards for non‑technical users; documented setup and operations to reduce onboarding time.</li></ul></div><div class='job'><h3>Founder / Mentor</h3><div class='company'>Toucan Studios OÜ</div><div class='meta'>06/2023 – Present · Remote</div><ul><li>Mentored developers on component design, accessibility, and Git hygiene; ran practical workshops.</li><li>Guided students/indies from prototype to production with light project management and delivery practices.</li></ul></div><div class='job'><h3>DevOps Engineer</h3><div class='company'>Smartmatic‑Cybernetica (COE, Internet Voting)</div><div class='meta'>01/2024 – 08/2024 · Estonia</div><ul><li>Automated infrastructure with Ansible; implemented CI/CD (GitLab CI) for containerized backends.</li><li>Set up Prometheus + Grafana monitoring and incident runbooks to improve visibility and response.</li></ul></div><div class='job'><h3>Earlier Technical Roles (selected)</h3><div class='company'>Disney · Blizzard · DNEG · Kavaleer</div><div class='meta'>2019 – 2023</div><ul><li>Pipeline/TD support and automation across film/games; cross‑team collaboration under deadlines.</li></ul></div>
+      </main>
+
+      <!-- RIGHT: Education + Skills -->
+      <aside class="sidebar">
+        <div class="sec-head">Education</div>
+        <div class='edu-item'><div class='degree'>Bachelor-level studies · Art/Animation</div><div class='school'>California State University – Northridge</div><div class='edu-meta'>2010–2012</div></div><div class='edu-item'><div class='degree'>A.A., Animation</div><div class='school'>College of the Canyons</div><div class='edu-meta'>2007–2010</div></div><div class='edu-item'><div class='degree'>Character Animation coursework</div><div class='school'>iAnimate.net</div><div class='edu-meta'>2013</div></div>
+
+        <div class="sec-head">Skills</div>
+        <div class='skill-cat'>Languages</div><ul class='skill-list'><li>JavaScript (ES6+)</li><li>TypeScript</li><li>HTML</li><li>CSS</li></ul><div class='skill-cat'>Libraries</div><ul class='skill-list'><li>React</li><li>Vite</li><li>Tailwind</li></ul><div class='skill-cat'>Backend</div><ul class='skill-list'><li>Node.js</li><li>Express</li><li>REST/JSON</li></ul><div class='skill-cat'>DevOps</div><ul class='skill-list'><li>Git & GitHub</li><li>GitHub Actions (CI/CD)</li><li>Docker</li><li>Linux/WSL2</li><li>GCP (basics)</li></ul><div class='skill-cat'>Testing/Tooling</div><ul class='skill-list'><li>ESLint/Prettier</li><li>Jest/RTL (basics)</li><li>npm scripts</li></ul><div class='skill-cat'>Spoken</div><ul class='skill-list'><li>English (C2)</li><li>Telugu (native/bilingual)</li><li>Estonian (A1)</li></ul>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

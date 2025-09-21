@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sreyeesh Garimella — CV</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --fg:#0f172a; --muted:#475569; --rule:#e2e8f0; }
+  * { box-sizing: border-box; }
+  html, body { height:100%; }
+  body { margin:0; color:var(--fg); font-family: Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; }
+  .page { max-width: 860px; margin: 18px auto; padding: 0 16px; }
+  h1 { font-size: 24px; margin: 0 0 2px; font-weight: 800; }
+  .title { font-size: 12.5px; color: var(--muted); margin-bottom: 6px; font-weight:600; }
+  .row { display:flex; flex-wrap:wrap; gap:6px 14px; font-size: 12px; color: var(--muted); }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing:.04em; margin: 12px 0 4px; }
+  p, li { font-size: 12px; line-height: 1.38; margin: 0; }
+  ul { margin: 4px 0 2px; padding-left: 16px; }
+  .rule { height:1px; background:var(--rule); margin: 8px 0; }
+  .tight { margin-top:2px; }
+  .two-col { display:grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+  .meta { color: var(--muted); font-size: 11.8px; }
+  /* Screen clamp to see approx one-page height */
+  @media screen and (min-width: 860px) {
+    .page { min-height: calc(297mm - 2.6cm); }
+  }
+  /* Strict A4 one-page print */
+  @media print {
+    @page { size: A4; margin: 1.2cm; }
+    body { margin:0; }
+    .page { margin:0; padding:0; }
+    h1 { font-size: 18pt; }
+    p, li { font-size: 10pt; line-height: 1.28; }
+    h2 { font-size: 10.5pt; }
+    .title, .row { font-size: 9.5pt; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Sreyeesh Garimella</h1>
+      <div class="title">Junior Full‑Stack JavaScript Engineer</div>
+      <div class="row">
+        <span>Valgjärve, Põlvamaa, Estonia</span><span>·</span><span>+372 5827 7155  ·  sgarime1@gmail.com  ·  github.com/Sreyeesh  ·  linkedin.com/in/sreyeeshgarimella</span>
+      </div>
+    </header>
+
+    <div class="rule"></div>
+
+    <section class="tight">
+      <h2>Summary</h2>
+      <p>Junior full‑stack engineer building fast, accessible web apps with JavaScript/TypeScript, React, Node.js and REST APIs. Comfortable shipping with GitHub Actions & Docker on Linux/WSL2. Background in automation and production pipelines; focused on maintainable UI, predictable releases, and clear docs.</p>
+    </section>
+
+    <section class="tight">
+      <h2>Technical Skills</h2>
+      <p>JavaScript (ES6+), TypeScript, React, Vite, HTML, CSS, Tailwind, a11y · Node.js, Express, REST/JSON · PostgreSQL basics, MongoDB basics · Git/GitHub, GitHub Actions (CI/CD), Docker, Linux/WSL2, GCP (basics) · ESLint/Prettier, npm scripts, Jest/RTL (basics)</p>
+    </section>
+
+    <section class="tight">
+      <h2>Experience</h2>
+      <p><strong>SG Production OÜ — Founder / Developer</strong> — <span class="meta">Jul 2022 – Present, Estonia</span></p><ul><li>Full‑stack web builds and workflow automations with clean APIs and dependable deployments.</li><li>Repeatable CI/CD and concise runbooks reduced manual steps and made releases predictable.</li></ul><p><strong>Toucan Studios OÜ — Founder / Mentor</strong> — <span class="meta">Jun 2023 – Present, Estonia</span></p><ul><li>Mentored developers/teams on component design, accessibility, Git hygiene, and iterative delivery.</li><li>Workshops and support for students/indies to produce production‑ready projects.</li></ul><p><strong>Smartmatic‑Cybernetica (COE, Internet Voting) — DevOps Engineer</strong> — <span class="meta">Jan 2024 – Aug 2024, Estonia</span></p><ul><li>Automated infra with Ansible; implemented CI/CD (GitLab CI) for containerized services.</li><li>Prometheus + Grafana monitoring and runbooks improved release reliability and visibility.</li></ul>
+      <p><strong>Earlier Technical Roles — Disney, Blizzard, DNEG, Kavaleer (2019–2023): pipeline/TD support, automation, cross‑team delivery.</strong></p>
+    </section>
+
+    <section class="tight">
+      <h2>Education & Certifications</h2>
+      <div class="two-col">
+        <p><strong>Education</strong><br/>California State University–Northridge (Art/Animation); College of the Canyons (A.A., Animation); iAnimate.net (Character Animation).</p>
+        <p><strong>Certifications</strong><br/>Front‑End Web Development (React basics); Build Front‑End Web Apps from Scratch; Intro to Python 3; Programming with Python; Intro to CSS.</p>
+      </div>
+    </section>
+
+    <section class="tight">
+      <h2>Languages</h2>
+      <p>English (C2), Telugu (native/bilingual), Estonian (A1)</p>
+    </section>
+  </div>
+</body>
+</html>

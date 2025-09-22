@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { projects } from "./projects";
+
 
 export default function App() {
   const cvHref = import.meta.env.BASE_URL + "Sreyeesh-Garimella-Resume-Accent.html";
@@ -205,14 +207,55 @@ export default function App() {
           </div>
         </section>
 
-        <section id="work" className="section">
-          <h3 className="text-xl font-bold"><span className="font-mono text-[var(--accent)] mr-2">03.</span>Work</h3>
-          <div className="mt-4 grid md:grid-cols-3 gap-4">
-            <div className="card p-5"><div className="badge">Case Study</div><div className="mt-2 font-semibold">Internal Dashboard</div></div>
-            <div className="card p-5"><div className="badge">Case Study</div><div className="mt-2 font-semibold">CI/CD Setup</div></div>
-            <div className="card p-5"><div className="badge">Case Study</div><div className="mt-2 font-semibold">A11y Refresh</div></div>
-          </div>
-        </section>
+      <section id="work" className="section">
+  <h3 className="text-xl font-bold">
+    <span className="font-mono text-[var(--accent)] mr-2">03.</span>
+    Work
+  </h3>
+
+  <div className="mt-4 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {projects.map((p) => (
+      <article key={p.title} className="card p-5 flex flex-col justify-between">
+        <div>
+          <div className="badge">Project</div>
+          <h4 className="mt-2 font-semibold">{p.title}</h4>
+          <p className="mt-2 text-[var(--muted)] text-sm">{p.blurb}</p>
+
+          <ul className="mt-3 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+            {p.stack.map((s) => (
+              <li key={s} className="px-2 py-0.5 rounded border border-token">
+                {s}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-4 flex gap-3">
+          <a
+            href={p.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost"
+            aria-label={`${p.title} GitHub repository`}
+          >
+            Repo
+          </a>
+          {p.live && (
+            <a
+              href={p.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-accent"
+            >
+              Live
+            </a>
+          )}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
 
         <section id="contact" className="section text-center">
           <p className="font-mono text-[var(--accent)]">04. What’s next?</p>

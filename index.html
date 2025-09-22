@@ -1,15 +1,72 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <title>Vite + React + TS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sreyeesh Garimella — Portfolio</title>
+    <meta name="description" content="Sreyeesh Garimella — Full-Stack JavaScript Engineer. React, TypeScript, Node.js, GitHub Actions, Docker. Based in Estonia." />
+    <meta name="robots" content="index,follow" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0a192f" />
+
+    <!-- Favicon (swap to %BASE_URL%favicon.png if you add one in /public) -->
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%vite.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Theme tokens -->
+    <style>
+      /* Dark (default) */
+      :root{
+        --bg:#0a192f;        /* deep navy */
+        --bg-soft:#112240;   /* panel navy */
+        --text:#cbd5e1;      /* light text */
+        --muted:#8892b0;     /* muted text */
+        --accent:#64ffda;    /* neon teal */
+      }
+      /* Light theme overrides */
+      [data-theme="light"]{
+        --bg:#f8fafc;
+        --bg-soft:#ffffff;
+        --text:#0f172a;
+        --muted:#475569;
+        --accent:#0ea5e9;
+      }
+      /* Smooth scroll + offset for sticky header (approx header height) */
+      html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    </style>
+
+    <!-- Set theme ASAP to avoid flash -->
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = saved || (prefersDark ? 'dark' : 'dark'); // default dark
+          document.documentElement.dataset.theme = theme;
+        } catch {}
+      })();
+    </script>
+
+    <!-- Open Graph / Share -->
+    <meta property="og:title" content="Sreyeesh Garimella — Portfolio" />
+    <meta property="og:description" content="React/TS, Node, CI/CD with Docker. Web engineer focused on clean UI and reliable delivery." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://Sreyeesh.github.io/cv-site/" />
+    <!-- If you add /public/og.png, uncomment the next line -->
+    <!-- <meta property="og:image" content="%BASE_URL%og.png" /> -->
+
+    <link rel="canonical" href="https://Sreyeesh.github.io/cv-site/" />
   </head>
+
   <body>
     <div id="root"></div>
+    <!-- Vite rewrites this on build; absolute path is correct for dev -->
     <script type="module" src="/src/main.tsx"></script>
+    <noscript>This site needs JavaScript to run.</noscript>
   </body>
 </html>
